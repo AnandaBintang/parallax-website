@@ -100,15 +100,31 @@ header {
 }
 
 .sec h2 {
-    font-size: 3em;
+    font-size: 4em;
     color: #fff;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
 
-.sec p {
-    font-size: 1em;
+.sec .container {
+    margin: auto;
+    width: 50%;
+}
+
+.sec .container p {
+    justify-content: center;
+    font-size: 1.5em;
     color: #fff;
     font-weight: 300;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.divider {
+    display: block;
+    border-bottom: 3px solid #fff;
+    margin: auto;
 }
 
 #preloader {
