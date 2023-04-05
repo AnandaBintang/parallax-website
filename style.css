@@ -36,19 +36,11 @@ header {
     width: 100%;
     padding: 30px 100px;
     display: flex;
-    justify-content: flex-start;
+    justify-content:center ;
     align-items: center;
     background-color: #003329;
     border-bottom: 1px solid #359381;
     z-index: 99;
-}
-
-.logo {
-    font-size: 2em;
-    color: #359381;
-    pointer-events: none;
-    margin-right: 270px;
-    font-family: 'geometos', sans-serif;
 }
 
 .navigation a {
