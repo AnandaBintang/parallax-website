@@ -47,14 +47,13 @@ header {
     text-decoration: none;
     color: #359381;
     padding: 6px 15px;
-    border-radius: 20px;
     margin: 0 10px;
     font-weight: 600;
     font-family: 'geometos', sans-serif;
+    transition: all .2s ease-in;
 }
 
 .navigation a:hover, .navigation a.active {
-    background: #359381;
     color: #ffffff;
 }
 
