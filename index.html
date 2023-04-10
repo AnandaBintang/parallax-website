@@ -25,13 +25,13 @@
 
     <header>
         <nav class="navigation">
-            <a href="#">About</a>
-            <a href="#">Work</a>
-            <a href="#">Contact</a>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section class="sec">
+    <section class="sec" id="about">
         <div class="container">
             <h2>MERAKI STUDIO</h2>
             <div class="divider"></div>
@@ -39,6 +39,33 @@
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi nulla dignissimos reiciendis, error
                 doloremque voluptatibus blanditiis eveniet illum nihil dolorem!
             </p>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <h3>Our Work</h3>
+        <form id="work">
+            <input type="radio" name="fancy" value="clubs" id="clubs" />
+            <input type="radio" name="fancy" value="hearts" id="hearts" />
+            <input type="radio" name="fancy" value="spades" id="spades" />
+            <input type="radio" name="fancy" value="diamonds" id="diamonds" />
+            <label for="clubs">&#9827; Clubs</label><label for="hearts">&#9829; Hearts</label><label
+                for="spades">&#9824; Spades</label><label for="diamonds">&#9830; Diamonds</label>
+        </form>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h3>Get In Touch</h3>
+            <p>We are always looking for new projects.br<br>Feel free to drop us a line</p>
+
+            <span>Send your email to</span>
+            <br>
+            <a href="">asd@mail.com</a>
+            <br>
+            <span>Or Call</span>
+            <br>
+            <a href="">08xxxxxxxx</a>
         </div>
     </section>
 
