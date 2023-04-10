@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id="preloader"></div>
+    <!-- <div id="preloader"></div> -->
 
     <section class="parallax">
         <img src="img/hill1.png" id="hill1">
@@ -23,11 +23,11 @@
         <img src="img/plant.png" id="plant">
     </section>
 
-    <header>
+    <header id="navbar">
         <nav class="navigation">
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#contact">Contact</a>
+            <a href="javascript: scrollToAbout()">About</a>
+            <a href="javascript: scrollToWork()">Work</a>
+            <a href="javascript: scrollToContact()">Contact</a>
         </nav>
     </header>
 
@@ -69,28 +69,8 @@
         </div>
     </section>
 
-    <script src="animation.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            preloader.style.visibility = 'visible'
-            preloader.style.opacity = 1
-            preloader.style.transition = 'opacity 2s linear'
-
-            document.body.style.overflowY = 'hidden'
-
-            setTimeout(() => {
-                preloader.style.visibility = 'hidden'
-                preloader.style.opacity = 0
-                preloader.style.transition = 'visibility 0s 0.3s, opacity 0.3s linear'
-                document.body.style.overflowY = 'auto'
-
-                setTimeout(() => {
-                    preloader.remove()
-                }, 300);
-            }, 5000);
-        });
-    </script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

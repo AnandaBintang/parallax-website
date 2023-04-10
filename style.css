@@ -67,6 +67,16 @@ header {
     color: #ffffff;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .sec {
+    padding-top: 160px;
+}
+
 .parallax {
     position: relative;
     display: flex;
