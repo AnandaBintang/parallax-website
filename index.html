@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="preloader"></div>
+    <!-- <div id="preloader"></div> -->
 
     <section class="parallax">
         <img src="img/hill1.png" id="hill1">
@@ -44,16 +44,11 @@
         </div>
     </section>
 
-    <section class="portfolio">
-        <h3>Our Work</h3>
-        <form id="work">
-            <input type="radio" name="fancy" value="clubs" id="clubs" />
-            <input type="radio" name="fancy" value="hearts" id="hearts" />
-            <input type="radio" name="fancy" value="spades" id="spades" />
-            <input type="radio" name="fancy" value="diamonds" id="diamonds" />
-            <label for="clubs">&#9827; Clubs</label><label for="hearts">&#9829; Hearts</label><label
-                for="spades">&#9824; Spades</label><label for="diamonds">&#9830; Diamonds</label>
-        </form>
+    <section class="work" id="work">
+        <h2>Our Work</h2>
+        <div class="pen">
+            <div class="stage"></div>
+        </div>
     </section>
 
     <section class="contact" id="contact">
@@ -71,8 +66,27 @@
         </div>
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="./js/youtube.js"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/main.js"></script>
+
+    <script>
+        $('.element').each(function () {
+            $(this).mouseover(function () {
+                $(this).addClass('active');
+                $('.stage').children('.element').not('.active').addClass('inactive');
+            });
+            $(this).mouseleave(function () {
+                $(this).removeClass('active');
+                $('.stage').children('.element').not('.active').removeClass('inactive');
+            });
+        });
+    </script>
 </body>
 
 </html>
