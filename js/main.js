@@ -59,36 +59,47 @@ $(document).ready(function () {
 
   // Sticky Navbar
   window.onscroll = function () {
-    myFunction();
+    stickyNavbar();
   };
+
+  // Image Slider
+  $(".element").each(function () {
+    $(this).mouseover(function () {
+      $(this).addClass("active");
+      $(".stage").children(".element").not(".active").addClass("inactive");
+    });
+    $(this).mouseleave(function () {
+      $(this).removeClass("active");
+      $(".stage").children(".element").not(".active").removeClass("inactive");
+    });
+  });
 });
 
 // Navigation Bar
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
+var sticky = $("#navbar").offset().top;
 
-function myFunction() {
+function stickyNavbar() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
+    $("#navbar").addClass("sticky");
   } else {
-    navbar.classList.remove("sticky");
+    $("#navbar").removeClass("sticky");
   }
 }
 
 function scrollToAbout() {
-  document.querySelector("#about").scrollIntoView({
+  $("#about")[0].scrollIntoView({
     behavior: "smooth",
   });
 }
 
 function scrollToWork() {
-  document.querySelector("#work").scrollIntoView({
+  $("#work")[0].scrollIntoView({
     behavior: "smooth",
   });
 }
 
 function scrollToContact() {
-  document.querySelector("#contact").scrollIntoView({
+  $("#contact")[0].scrollIntoView({
     behavior: "smooth",
   });
 }

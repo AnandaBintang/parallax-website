@@ -198,7 +198,7 @@ header {
 }
 
 .element {
-  background: var(--purple) 40% 0 no-repeat;
+  background: var(--purple) 50% 0 no-repeat;
   background-size: cover;
   width: 100px;
   -webkit-transform-origin: 50% 50%;
@@ -242,19 +242,19 @@ header {
 
 @media all and (min-width: 900px) {
   .pen {
-    max-width: 900px;
+    max-width: 890px;
   }
   .element {
-    width: 174px;
+    width: 164px;
   }
   .element.inactive {
     width: 32px;
   }
   .element.active {
-    width: 744px;
+    width: 734px;
   }
   .stage {
-    max-width: 900px;
+    max-width: 890px;
     height: 600px;
   }
 }
