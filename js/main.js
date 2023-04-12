@@ -73,6 +73,19 @@ $(document).ready(function () {
       $(".stage").children(".element").not(".active").removeClass("inactive");
     });
   });
+
+  // SVG Animation
+  var $doc = $(document),
+    $win = $(window),
+    $svg = $("svg").drawsvg(),
+    max = $doc.height() - $win.height();
+  // alert($doc.height());
+  // alert($win.height());
+
+  $win.on("scroll", function () {
+    var p = $win.scrollTop() / max;
+    $svg.drawsvg("progress", p);
+  });
 });
 
 // Navigation Bar

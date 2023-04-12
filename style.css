@@ -251,7 +251,7 @@ header {
     width: 32px;
   }
   .element.active {
-    width: 734px;
+    width: 691px;
   }
   .stage {
     max-width: 890px;
@@ -362,6 +362,15 @@ header {
 
 .contact a:hover {
   color: var(--green);
+}
+
+.svg {
+  position: relative;
+  background-color: var(--purple);
+}
+
+.svg svg {
+  margin: auto;
 }
 
 #preloader {
