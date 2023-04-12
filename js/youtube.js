@@ -2,9 +2,11 @@ const yt = [
   "https://www.youtube.com/watch?v=7BOwur-4Ows",
   "https://www.youtube.com/watch?v=eNYm0Y-0Fjs",
   "https://www.youtube.com/watch?v=llhQ9C3za-k",
+  "https://www.youtube.com/watch?v=cnw6vMSZKHU",
+  "https://www.youtube.com/watch?v=cnw6vMSZKHU",
 ];
 
-for (i = 0; i <= 2; i++) {
+for (i = 0; i <= 4; i++) {
   var thumbnail = get_youtube_thumbnail(yt[i], "max");
   $(".stage").append(`<a href="${yt[i]}" class="element ${thumbnail[1]}"></a>`);
   $(`.${thumbnail[1]}`).css("background-image", `url(${thumbnail[0]})`);
