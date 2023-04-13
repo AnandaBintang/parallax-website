@@ -18,7 +18,7 @@ $(document).ready(function () {
     setTimeout(() => {
       $("#preloader").remove();
     }, 300);
-  }, 1);
+  }, 5000);
 
   // Parallax Animation
   $("#leaf").css({ top: "-250px", left: "400px" });
