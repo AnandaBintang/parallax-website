@@ -179,32 +179,28 @@ header {
   text-align: left;
   transform-origin: 50% 50%;
   transform-style: preserve-3d;
-  transform: rotateX(11deg) rotateY(16.5deg);
+  transform: rotateX(0deg) rotateY(0deg);
   min-width: 595px;
   max-width: 1281px;
 }
 
 .card {
   border-radius: 15px;
-  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.6);
   display: inline-block;
   height: 250px;
-  overflow: hidden;
   perspective: 1200px;
   position: relative;
   transform-style: preserve-3d;
-  transform: translatez(35px);
   transition: transform 200ms ease-out;
-  width: 270px;
+  width: 300px;
   text-align: center;
-}
-.card:not(:last-child) {
-  margin-right: 30px;
+  margin: 40px;
 }
 
 .card__img {
   position: relative;
   height: 100%;
+  transform: translateZ(30px);
 }
 
 .card__bg {
@@ -219,21 +215,17 @@ header {
 }
 
 .card__one .card__img {
-  top: 14px;
+  top: -10px;
   right: -10px;
   height: 110%;
 }
 .card__one .card__bg {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_spirited.jpg")
     center/cover no-repeat;
+  border-radius: 15px;
 }
 .card__text {
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.55) 100%
-  );
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -241,6 +233,7 @@ header {
   justify-content: center;
   position: absolute;
   width: 100%;
+  transform: translateZ(50px);
   z-index: 2;
 }
 
