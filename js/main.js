@@ -18,7 +18,7 @@ $(document).ready(function () {
     setTimeout(() => {
       $("#preloader").remove();
     }, 300);
-  }, 5000);
+  }, 1);
 
   // Parallax Animation
   $("#leaf").css({ top: "-250px", left: "400px" });
@@ -62,6 +62,43 @@ $(document).ready(function () {
     stickyNavbar();
   };
 
+  // Services Parallax
+  const cards = document.querySelector(".cards");
+  const images = document.querySelectorAll(".card__img");
+  const backgrounds = document.querySelectorAll(".card__bg");
+  const range = 40;
+
+  // const calcValue = (a, b) => (((a * 100) / b) * (range / 100) -(range / 2)).toFixed(1);
+  const calcValue = (a, b) => ((a / b) * range - range / 2).toFixed(1); // thanks @alice-mx
+
+  let timeout;
+  document.addEventListener(
+    "mousemove",
+    ({ x, y }) => {
+      if (timeout) {
+        window.cancelAnimationFrame(timeout);
+      }
+
+      timeout = window.requestAnimationFrame(() => {
+        const yValue = calcValue(y, window.innerHeight);
+        const xValue = calcValue(x, window.innerWidth);
+
+        cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+
+        [].forEach.call(images, (image) => {
+          image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+        });
+
+        [].forEach.call(backgrounds, (background) => {
+          background.style.backgroundPosition = `${xValue * 0.45}px ${
+            -yValue * 0.45
+          }px`;
+        });
+      });
+    },
+    false
+  );
+
   // Image Slider
   $(".element").each(function () {
     $(this).mouseover(function () {
@@ -72,19 +109,6 @@ $(document).ready(function () {
       $(this).removeClass("active");
       $(".stage").children(".element").not(".active").removeClass("inactive");
     });
-  });
-
-  // SVG Animation
-  var $doc = $(document),
-    $win = $(window),
-    $svg = $("svg").drawsvg(),
-    max = $doc.height() - $win.height();
-  // alert($doc.height());
-  // alert($win.height());
-
-  $win.on("scroll", function () {
-    var p = $win.scrollTop() / max;
-    $svg.drawsvg("progress", p);
   });
 });
 
