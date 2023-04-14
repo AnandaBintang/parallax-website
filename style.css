@@ -266,8 +266,8 @@ header {
   margin-top: 12%;
   padding: 0 30px 25px;
 
-  -webkit-text-stroke: 1px #fff;
-  stroke: 1px #fff;
+  -webkit-text-stroke: 0.7px #fff;
+  stroke: 0.7px #fff;
 
   text-align: left;
   font-size: 28px;
