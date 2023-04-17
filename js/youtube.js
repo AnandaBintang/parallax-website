@@ -1,3 +1,5 @@
+const mediaQuery = window.matchMedia("(min-width: 768px)");
+
 const yt = {
   0: {
     alt: "Image-1",
@@ -26,9 +28,18 @@ const yt = {
   },
 };
 
-for (i = 0; i <= 4; i++) {
-  $(".stage").append(
-    `<a data-fslightbox="gallery" href="${yt[i].link}" class="element ${yt[i].alt}"></a>`
-  );
-  $(`.${yt[i].alt}`).css("background-image", `url(${yt[i].img})`);
+if (mediaQuery.matches) {
+  for (i = 0; i <= 4; i++) {
+    $(".stage").append(
+      `<a data-fslightbox="gallery" href="${yt[i].link}" class="element ${yt[i].alt}"></a>`
+    );
+    $(`.${yt[i].alt}`).css("background-image", `url(${yt[i].img})`);
+  }
+} else {
+  for (i = 0; i <= 2; i++) {
+    $(".stage").append(
+      `<a data-fslightbox="gallery" href="${yt[i].link}" class="element ${yt[i].alt}"></a>`
+    );
+    $(`.${yt[i].alt}`).css("background-image", `url(${yt[i].img})`);
+  }
 }
