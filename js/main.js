@@ -9,18 +9,20 @@ $(document).ready(function () {
     transition: "opacity 2s linear",
   });
 
-  setTimeout(() => {
-    $("body").css("overflowY", "auto");
-    $("#preloader").css({
-      visibility: "hidden",
-      opacity: "0",
-      transition: "visibility 0s 0.3s, opacity 0.3s linear",
-    });
-
+  window.addEventListener("load", () => {
     setTimeout(() => {
-      $("#preloader").remove();
-    }, 300);
-  }, 3000);
+      $("body").css("overflowY", "auto");
+      $("#preloader").css({
+        visibility: "hidden",
+        opacity: "0",
+        transition: "visibility 0s 0.3s, opacity 0.3s linear",
+      });
+
+      setTimeout(() => {
+        $("#preloader").remove();
+      }, 300);
+    }, 3000);
+  });
 
   if (mediaQuery.matches) {
     // Parallax Animation
@@ -129,6 +131,10 @@ $(document).ready(function () {
       $(this).removeClass("active");
       $(".stage").children(".element").not(".active").removeClass("inactive");
     });
+  });
+
+  $(window).resize(function () {
+    window.location.reload();
   });
 });
 
