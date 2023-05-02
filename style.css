@@ -225,7 +225,7 @@ input[type="checkbox"] {
 /* about */
 .sec {
   position: relative;
-  background: #003329;
+  background: var(--purple);
   padding: 100px 50px 0 50px;
 }
 
@@ -263,7 +263,12 @@ input[type="checkbox"] {
 /* Slider */
 .work {
   position: relative;
-  background: #3e76c3;
+  background: linear-gradient(
+    180deg,
+    rgba(48, 15, 42, 1) 0%,
+    rgba(55, 65, 117, 1) 60%,
+    rgba(62, 118, 195, 1) 100%
+  );
   padding: 100px 50px 100px 50px;
   min-height: 100vh;
 }
@@ -459,13 +464,13 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #003329;
-    border-bottom: 1px solid #359381;
+    background-color: var(--purple);
+    border-bottom: 1px solid var(--green);
     z-index: 99;
   }
   .navigation a {
     text-decoration: none;
-    color: #359381;
+    color: var(--green);
     padding: 6px 15px;
     margin: 0 10px;
     font-weight: 600;
