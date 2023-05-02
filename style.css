@@ -59,7 +59,7 @@ body {
 }
 
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   right: 20px;
   /* left: 20px; */
@@ -188,7 +188,7 @@ input[type="checkbox"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
   background: #170424;
 }
 
