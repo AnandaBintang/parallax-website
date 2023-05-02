@@ -32,7 +32,7 @@ $(document).ready(function () {
 
       $("#background").css("top", `${value * 0.3}px`);
       $("#midground1").css("left", `${value * -0.2}px`);
-      $("#midground2").css("top", `${value * 0.3}px`);
+      $("#midground2").css("top", `${value * 0.4}px`);
       $("#midground3").css("left", `${value * 0.2}px`);
     });
   } else {
