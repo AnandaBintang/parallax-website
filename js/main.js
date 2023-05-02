@@ -58,7 +58,6 @@ $(document).ready(function () {
       });
 
       $("#midground").css("top", `${value * 0.5}px`);
-
       $("#hill5").css("left", `${value * 1.5}px`);
       $("#hill4").css("left", `${value * -1.5}px`);
       $("#hill1").css("top", `${value * 1}px`);
