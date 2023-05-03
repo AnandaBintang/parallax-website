@@ -72,16 +72,17 @@ $(document).ready(function () {
       $("#dummy").css("transform", `rotate(${newVal * 0.05}deg)`);
       if (newVal >= 0) {
         $("#cloud1").css({
-          // left: `${newVal * -0.05}px`,
-          top: `${newVal * -0.1}px`,
+          left: `${newVal * -0.05}px`,
+          top: `${newVal * 0.3}px`,
         });
 
         $("#cloud2").css({
-          // left: `${newVal * -0.17}px`,
-          top: `${newVal * -0.1}px`,
+          left: `${newVal * 0.15}px`,
+          top: `${newVal * 0.3}px`,
         });
 
-        $("#ground").css("top", `${newVal * 0.13}px`);
+        $("#mountain").css("top", `${newVal * 0.3}px`);
+        $("#ground").css("top", `${newVal * 0.2}px`);
         $("#hill-tree").css({
           top: `${newVal * 0.1}px`,
           left: `${newVal * -0.05}px`,
