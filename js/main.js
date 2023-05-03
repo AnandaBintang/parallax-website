@@ -10,6 +10,14 @@ $(document).ready(function () {
   });
 
   window.addEventListener("load", () => {
+    $("#midground1").css({
+      left: "-100px",
+    });
+    $("#midground2").css("top", "100px");
+    $("#midground3").css({
+      left: "100px",
+    });
+
     setTimeout(() => {
       $("body").css("overflowY", "auto");
       $("#preloader").css({
@@ -18,6 +26,20 @@ $(document).ready(function () {
         transition: "visibility 0s 0.3s, opacity 0.3s linear",
       });
 
+      $("#midground1").css({
+        transition: "left 1s",
+        left: "0px",
+      });
+
+      $("#midground3").css({
+        transition: "left 1s",
+        left: "0px",
+      });
+
+      $("#midground2").css({
+        top: "0px",
+        transition: "top 1.5s",
+      });
       setTimeout(() => {
         $("#preloader").remove();
       }, 300);
@@ -30,9 +52,19 @@ $(document).ready(function () {
     $(document).on("scroll", () => {
       let value = window.scrollY;
 
+      $("#midground1").css({
+        transition: "",
+      });
+      $("#midground3").css({
+        transition: "",
+      });
+      $("#midground2").css({
+        transition: "",
+      });
+
       $("#background").css("top", `${value * 0.3}px`);
       $("#midground1").css("left", `${value * -0.2}px`);
-      $("#midground2").css("top", `${value * 0.4}px`);
+      $("#midground2").css("top", `${value * 0.45}px`);
       $("#midground3").css("left", `${value * 0.2}px`);
 
       let newVal = value - 2500;
@@ -45,6 +77,11 @@ $(document).ready(function () {
 
         $("#mountain").css("top", `${newVal * 0.3}px`);
         $("#ground").css("top", `${newVal * 0.2}px`);
+        $("#hill-tree").css({
+          top: `${newVal * 0.1}px`,
+          left: `${newVal * -0.05}px`,
+        });
+        $("#tree").css("top", `${newVal * 0.09}px`);
       }
     });
   } else {
