@@ -220,8 +220,8 @@ input[type="checkbox"] {
 /* about */
 .sec {
   position: relative;
-  background: var(--purple);
-  padding: 100px 50px 0 50px;
+  background: #112151;
+  padding: 50px 50px 70px 50px;
 }
 
 .sec h2 {
@@ -258,14 +258,19 @@ input[type="checkbox"] {
 /* Slider */
 .work {
   position: relative;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(48, 15, 42, 1) 0%,
     rgba(55, 65, 117, 1) 60%,
     rgba(62, 118, 195, 1) 100%
-  );
-  padding: 100px 50px 100px 50px;
-  min-height: 100vh;
+  ); */
+  background: #112151;
+  padding: 60px 50px 100px 50px;
+  /* min-height: 100vh; */
+}
+
+#dummy {
+  transform: rotate(0deg);
 }
 
 .work h2 {
@@ -350,7 +355,7 @@ input[type="checkbox"] {
 
 /* Contact */
 .contact {
-  background-color: var(--purple);
+  background-color: #112151;
   position: relative;
   color: var(--white);
   min-height: 60vh;
@@ -459,8 +464,8 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--purple);
-    border-bottom: 1px solid var(--green);
+    background-color: #112151;
+    border-bottom: 0.5px solid var(--green);
     z-index: 99;
   }
   .navigation a {
@@ -468,6 +473,7 @@ input[type="checkbox"] {
     color: var(--green);
     padding: 6px 15px;
     margin: 0 10px;
+    font-size: 22px;
     font-weight: 600;
     font-family: "geometos", sans-serif;
     transition: all 0.2s ease-in;
@@ -532,7 +538,8 @@ input[type="checkbox"] {
 
   /* Contact */
   .contact {
-    min-height: 90vh;
+    padding: 0 0 80px 0;
+    min-height: 50vh;
   }
 
   .contact .container {

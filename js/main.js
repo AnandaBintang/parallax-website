@@ -43,11 +43,12 @@ $(document).ready(function () {
       setTimeout(() => {
         $("#preloader").remove();
       }, 300);
-    }, 3000);
+    }, 1);
   });
 
   if (mediaQuery.matches) {
     $("#nav-mobile").hide();
+
     // Parallax Animation
     $(document).on("scroll", () => {
       let value = window.scrollY;
@@ -68,15 +69,19 @@ $(document).ready(function () {
       $("#midground3").css("left", `${value * 0.2}px`);
 
       let newVal = value - 2500;
+      $("#dummy").css("transform", `rotate(${newVal * 0.05}deg)`);
       if (newVal >= 0) {
-        $("#cloud1").css("left", `${newVal * -0.2}px`);
-        $("#cloud1").css("top", `${newVal * 0.4}px`);
+        $("#cloud1").css({
+          // left: `${newVal * -0.05}px`,
+          top: `${newVal * -0.1}px`,
+        });
 
-        $("#cloud2").css("left", `${newVal * 0.4}px`);
-        $("#cloud2").css("top", `${newVal * 0.4}px`);
+        $("#cloud2").css({
+          // left: `${newVal * -0.17}px`,
+          top: `${newVal * -0.1}px`,
+        });
 
-        $("#mountain").css("top", `${newVal * 0.3}px`);
-        $("#ground").css("top", `${newVal * 0.2}px`);
+        $("#ground").css("top", `${newVal * 0.13}px`);
         $("#hill-tree").css({
           top: `${newVal * 0.1}px`,
           left: `${newVal * -0.05}px`,
