@@ -34,6 +34,18 @@ $(document).ready(function () {
       $("#midground1").css("left", `${value * -0.2}px`);
       $("#midground2").css("top", `${value * 0.4}px`);
       $("#midground3").css("left", `${value * 0.2}px`);
+
+      let newVal = value - 2500;
+      if (newVal >= 0) {
+        $("#cloud1").css("left", `${newVal * -0.2}px`);
+        $("#cloud1").css("top", `${newVal * 0.4}px`);
+
+        $("#cloud2").css("left", `${newVal * 0.4}px`);
+        $("#cloud2").css("top", `${newVal * 0.4}px`);
+
+        $("#mountain").css("top", `${newVal * 0.3}px`);
+        $("#ground").css("top", `${newVal * 0.2}px`);
+      }
     });
   } else {
     $("body").css("overflowY", "auto");

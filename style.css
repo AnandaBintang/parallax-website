@@ -164,14 +164,9 @@ input[type="checkbox"] {
   background: #170424;
 }
 
-#text {
-  position: absolute;
-  font-size: 3em;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  font-family: "alexana", sans-serif;
-  color: var(--purple);
-  letter-spacing: 15px;
+#mountain {
+  transform: translateY(0);
+  transition: transform 0.5s;
 }
 
 .parallax img {
