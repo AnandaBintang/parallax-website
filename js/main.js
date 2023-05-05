@@ -1,8 +1,8 @@
 $(document).ready(function () {
-  const mediaQuery = window.matchMedia("(min-width: 768px)");
+  const mediaQuery = window.matchMedia("(min-width: 1025px)");
 
   // Preloader
-  $("body").css("overflowY", "hidden");
+  // $("body").css("overflowY", "hidden");
   $("#preloader").css({
     visibility: "visible",
     opacity: "1",
@@ -48,6 +48,9 @@ $(document).ready(function () {
 
   if (mediaQuery.matches) {
     $("#nav-mobile").hide();
+    $(window).resize(function () {
+      window.location.reload();
+    });
 
     // Parallax Animation
     $(document).on("scroll", () => {
@@ -92,7 +95,16 @@ $(document).ready(function () {
     });
   } else {
     $("body").css("overflowY", "auto");
+    $("#navbar").hide();
   }
+
+  $("#active").on("click", () => {
+    if ($("#active").is(":checked")) {
+      $("body").css("overflow", "hidden");
+    } else {
+      $("body").css("overflow", "");
+    }
+  });
 
   // Sticky Navbar
   window.onscroll = function () {
@@ -161,10 +173,6 @@ $(document).ready(function () {
       $(".stage").children(".element").not(".active").removeClass("inactive");
     });
   });
-
-  $(window).resize(function () {
-    window.location.reload();
-  });
 });
 
 // Navigation Bar
@@ -178,19 +186,54 @@ function stickyNavbar() {
   }
 }
 
+function mobileMenu() {
+  $("body").css("overflow", "");
+  $("#active").prop("checked", false);
+}
+
+$("#about-mobile").on("click", () => {
+  mobileMenu();
+
+  $("#about")[0].scrollIntoView({
+    behavior: "smooth",
+  });
+});
+
+$("#work-mobile").on("click", () => {
+  mobileMenu();
+
+  $("#work")[0].scrollIntoView({
+    behavior: "smooth",
+  });
+});
+
+$("#contact-mobile").on("click", () => {
+  mobileMenu();
+
+  $("#contact")[0].scrollIntoView({
+    behavior: "smooth",
+  });
+});
+
 function scrollToAbout() {
+  mobileMenu();
+
   $("#about")[0].scrollIntoView({
     behavior: "smooth",
   });
 }
 
 function scrollToWork() {
+  mobileMenu();
+
   $("#work")[0].scrollIntoView({
     behavior: "smooth",
   });
 }
 
 function scrollToContact() {
+  mobileMenu();
+
   $("#contact")[0].scrollIntoView({
     behavior: "smooth",
   });
