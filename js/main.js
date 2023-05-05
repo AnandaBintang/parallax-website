@@ -84,13 +84,13 @@ $(document).ready(function () {
           top: `${newVal * 0.3}px`,
         });
 
-        $("#mountain").css("top", `${newVal * 0.3}px`);
-        $("#ground").css("top", `${newVal * 0.2}px`);
+        // $("#mountain").css("top", `${newVal * 0.3}px`);
+        $("#ground").css("top", `${newVal * 0.1}px`);
         $("#hill-tree").css({
           top: `${newVal * 0.1}px`,
           left: `${newVal * -0.05}px`,
         });
-        $("#tree").css("top", `${newVal * 0.09}px`);
+        $("#tree").css("top", `${newVal * 0.07}px`);
       }
     });
   } else {
