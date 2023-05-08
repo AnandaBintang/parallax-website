@@ -43,7 +43,7 @@ $(document).ready(function () {
       setTimeout(() => {
         $("#preloader").remove();
       }, 300);
-    }, 1);
+    }, 3000);
   });
 
   if (mediaQuery.matches) {

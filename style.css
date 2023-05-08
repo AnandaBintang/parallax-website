@@ -486,6 +486,10 @@ input[type="checkbox"] {
     width: 50%;
   }
 
+  .sec .container h2 {
+    margin-bottom: 0.7em;
+  }
+
   .sec .container p {
     font-size: 1em;
   }
@@ -606,7 +610,7 @@ input[type="checkbox"] {
 }
 
 .services .ag-format-container h2 {
-  margin: 1em 0;
+  margin: 0.3em 0 1em 0;
   justify-content: center;
   -webkit-text-stroke: 0.5px #fff;
   stroke: 1px #fff;
