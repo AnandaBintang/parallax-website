@@ -10,6 +10,14 @@ $(document).ready(function () {
   });
 
   window.addEventListener("load", () => {
+    let value = window.scrollY;
+
+    if (value > 400) {
+      $(".logo").css("opacity", `${(value - 400) * 0.002}`);
+    } else {
+      $(".logo").css("opacity", "0");
+    }
+
     $("#midground1").css({
       left: "-100px",
     });
@@ -55,6 +63,12 @@ $(document).ready(function () {
     // Parallax Animation
     $(document).on("scroll", () => {
       let value = window.scrollY;
+
+      if (value > 400) {
+        $(".logo").css("opacity", `${(value - 400) * 0.002}`);
+      } else {
+        $(".logo").css("opacity", "0");
+      }
 
       $("#midground1").css({
         transition: "",
