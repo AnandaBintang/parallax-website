@@ -2,7 +2,7 @@ $(document).ready(function () {
   const mediaQuery = window.matchMedia("(min-width: 1025px)");
 
   // Preloader
-  // $("body").css("overflowY", "hidden");
+  $("body").css("overflowY", "hidden");
   $("#preloader").css({
     visibility: "visible",
     opacity: "1",
@@ -66,6 +66,10 @@ $(document).ready(function () {
 
       if (value > 400) {
         $(".logo").css("opacity", `${(value - 400) * 0.002}`);
+        $("#navbar").css(
+          "background-color",
+          `rgba(17, 33, 81, ${(value - 500) * 0.002})`
+        );
       } else {
         $(".logo").css("opacity", "0");
       }
@@ -80,10 +84,19 @@ $(document).ready(function () {
         transition: "",
       });
 
-      $("#background").css("top", `${value * 0.3}px`);
+      $("#dragon").css("top", `${value * 0.15}px`);
       $("#midground1").css("left", `${value * -0.2}px`);
-      $("#midground2").css("top", `${value * 0.45}px`);
+      $("#midground2").css("top", `${value * 0.25}px`);
       $("#midground3").css("left", `${value * 0.2}px`);
+
+      $("#lava1").css({
+        top: `${value * 0.07}px`,
+        left: `${value * -0.001}px`,
+      });
+      $("#lava2").css("top", `${value * 0.07}px`);
+      $("#lava3").css("top", `${value * 0.07}px`);
+      $("#lava4").css("top", `${value * 0.07}px`);
+      $("#lava5").css("top", `${value * 0.1}px`);
 
       let newVal = value - 2500;
       $("#dummy").css("transform", `rotate(${newVal * 0.05}deg)`);
@@ -109,7 +122,6 @@ $(document).ready(function () {
     });
   } else {
     $("body").css("overflowY", "auto");
-    $("#navbar").hide();
   }
 
   $("#active").on("click", () => {
