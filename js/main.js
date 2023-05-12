@@ -122,6 +122,7 @@ $(document).ready(function () {
     });
   } else {
     $("body").css("overflowY", "auto");
+    $("#navbar").hide();
   }
 
   $("#active").on("click", () => {
