@@ -56,6 +56,8 @@ $(document).ready(function () {
 
   if (mediaQuery.matches) {
     $("#nav-mobile").hide();
+    $("#logo-mobile").hide();
+
     $(window).resize(function () {
       window.location.reload();
     });

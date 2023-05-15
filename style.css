@@ -55,11 +55,21 @@ body {
   clip-path: circle(75%);
 }
 
+.logo-mobile {
+  position: fixed;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+}
+
+.logo-mobile img {
+  height: 3rem;
+}
+
 .menu-btn {
   position: fixed;
   z-index: 2;
   right: 20px;
-  /* left: 20px; */
   top: 20px;
   height: 50px;
   width: 50px;
@@ -332,7 +342,8 @@ input[type="checkbox"] {
 
 /* Contact */
 .contact {
-  background-color: #112151;
+  /* background-color: #112151; */
+  background-image: url("img/gradient 1 (2).png");
   position: relative;
   color: var(--white);
   min-height: 60vh;
@@ -442,7 +453,7 @@ input[type="checkbox"] {
 
   /* Nav Menu */
   header {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -450,7 +461,7 @@ input[type="checkbox"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(17, 33, 81, 0);
+    background-color: transparent;
     /* background-color: #112151; */
     /* border-bottom: 0.5px solid var(--green); */
     z-index: 99;
