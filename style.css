@@ -213,7 +213,7 @@ input[type="checkbox"] {
   position: relative;
   background: #112151;
   padding: 50px 50px 70px 50px;
-  background-image: url("img/gradient 1.png");
+  background-image: url("img/about-bg.png");
   background-size: cover;
 }
 
@@ -257,7 +257,6 @@ input[type="checkbox"] {
   background: #112151;
   padding: 60px 50px 60px 50px;
   background: #3673cb;
-  /* background-image: url("img/gradient 2.png"); */
   background-size: cover;
 }
 
@@ -342,8 +341,7 @@ input[type="checkbox"] {
 
 /* Contact */
 .contact {
-  /* background-color: #112151; */
-  background-image: url("img/gradient 1 (2).png");
+  background-image: url("img/contact-bg.png");
   position: relative;
   color: var(--white);
   min-height: 60vh;
@@ -457,18 +455,16 @@ input[type="checkbox"] {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0 100px;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    /* background-color: #112151; */
-    /* border-bottom: 0.5px solid var(--green); */
     z-index: 99;
   }
 
   header .logo {
-    width: 50px;
+    width: 340px;
     height: auto;
   }
 
@@ -478,7 +474,7 @@ input[type="checkbox"] {
 
   .navigation a {
     text-decoration: none;
-    color: var(--green);
+    color: var(--white);
     padding: 6px 15px;
     margin: 0 10px;
     font-size: 22px;
@@ -489,7 +485,7 @@ input[type="checkbox"] {
 
   .navigation a:hover,
   .navigation a.active {
-    color: #ffffff;
+    color: var(--green);
   }
 
   .sticky {

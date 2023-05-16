@@ -13,9 +13,12 @@ $(document).ready(function () {
     let value = window.scrollY;
 
     if (value > 400) {
-      $(".logo").css("opacity", `${(value - 400) * 0.002}`);
+      $("#navbar").css(
+        "background",
+        "linear-gradient(0deg, rgba(17, 33, 81, 0) 0%, rgba(17, 33, 81, 0.5) 30%, rgba(17, 33, 81, 1) 100%)"
+      );
     } else {
-      $(".logo").css("opacity", "0");
+      $("#navbar").css("background", `transparent`);
     }
 
     $("#midground1").css({
@@ -34,6 +37,10 @@ $(document).ready(function () {
         transition: "visibility 0s 0.3s, opacity 0.3s linear",
       });
 
+      $("#dragon").css({
+        transition: "top 1s",
+      });
+
       $("#midground1").css({
         transition: "left 1s",
         left: "0px",
@@ -49,6 +56,20 @@ $(document).ready(function () {
         transition: "top 1.5s",
       });
       setTimeout(() => {
+        $("#dragon").css("top", `${value * 0.15}px`);
+        $("#midground1").css("left", `${value * -0.1}px`);
+        $("#midground2").css("top", `${value * 0.25}px`);
+        $("#midground3").css("left", `${value * 0.1}px`);
+
+        $("#lava1").css({
+          top: `${value * 0.07}px`,
+          left: `${value * -0.001}px`,
+        });
+        $("#lava2").css("top", `${value * 0.07}px`);
+        $("#lava3").css("top", `${value * 0.07}px`);
+        $("#lava4").css("top", `${value * 0.07}px`);
+        $("#lava5").css("top", `${value * 0.1}px`);
+
         $("#preloader").remove();
       }, 300);
     }, 3000);
@@ -67,15 +88,17 @@ $(document).ready(function () {
       let value = window.scrollY;
 
       if (value > 400) {
-        $(".logo").css("opacity", `${(value - 400) * 0.002}`);
         $("#navbar").css(
-          "background-color",
-          `rgba(17, 33, 81, ${(value - 500) * 0.002})`
+          "background",
+          "linear-gradient(0deg, rgba(17, 33, 81, 0) 0%, rgba(17, 33, 81, 0.5) 30%, rgba(17, 33, 81, 1) 100%)"
         );
       } else {
-        $(".logo").css("opacity", "0");
+        $("#navbar").css("background", `transparent`);
       }
 
+      $("#dragon").css({
+        transition: "",
+      });
       $("#midground1").css({
         transition: "",
       });
@@ -87,9 +110,9 @@ $(document).ready(function () {
       });
 
       $("#dragon").css("top", `${value * 0.15}px`);
-      $("#midground1").css("left", `${value * -0.2}px`);
+      $("#midground1").css("left", `${value * -0.1}px`);
       $("#midground2").css("top", `${value * 0.25}px`);
-      $("#midground3").css("left", `${value * 0.2}px`);
+      $("#midground3").css("left", `${value * 0.1}px`);
 
       $("#lava1").css({
         top: `${value * 0.07}px`,
@@ -100,7 +123,7 @@ $(document).ready(function () {
       $("#lava4").css("top", `${value * 0.07}px`);
       $("#lava5").css("top", `${value * 0.1}px`);
 
-      let newVal = value - 2500;
+      let newVal = value - 2300;
       $("#dummy").css("transform", `rotate(${newVal * 0.05}deg)`);
       if (newVal >= 0) {
         $("#cloud1").css({
