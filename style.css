@@ -146,6 +146,24 @@ input[type="checkbox"] {
 }
 
 /* Parallax Hero */
+.bg-mobile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #170424;
+}
+
+.bg-mobile img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  height: 100vh;
+}
+
 .parallax {
   position: relative;
   display: flex;

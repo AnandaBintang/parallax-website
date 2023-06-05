@@ -78,6 +78,7 @@ $(document).ready(function () {
   if (mediaQuery.matches) {
     $("#nav-mobile").hide();
     $("#logo-mobile").hide();
+    $(".bg-mobile").hide();
 
     $(window).resize(function () {
       window.location.reload();
@@ -148,6 +149,7 @@ $(document).ready(function () {
   } else {
     $("body").css("overflowY", "auto");
     $("#navbar").hide();
+    $(".parallax").hide();
   }
 
   $("#active").on("click", () => {
