@@ -157,6 +157,7 @@ input[type="checkbox"] {
 
 .bg-mobile img {
   position: absolute;
+  object-fit: cover;
   top: 0;
   left: 0;
   width: 100%;
