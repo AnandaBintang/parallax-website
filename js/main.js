@@ -2,12 +2,12 @@ $(document).ready(function () {
   const mediaQuery = window.matchMedia("(min-width: 1025px)");
 
   // Preloader
-  // $("body").css("overflowY", "hidden");
-  // $("#preloader").css({
-  //   visibility: "visible",
-  //   opacity: "1",
-  //   transition: "opacity 2s linear",
-  // });
+  $("body").css("overflowY", "hidden");
+  $("#preloader").css({
+    visibility: "visible",
+    opacity: "1",
+    transition: "opacity 2s linear",
+  });
 
   window.addEventListener("load", () => {
     let value = window.scrollY;

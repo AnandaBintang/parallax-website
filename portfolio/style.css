@@ -15,7 +15,7 @@ h2 {
 }
 #scene {
   position: relative;
-  overflow: hidden;
+  overflow: auto;
   width: 100%;
 }
 .layer {

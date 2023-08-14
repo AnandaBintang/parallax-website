@@ -275,8 +275,12 @@ input[type="checkbox"] {
   position: relative;
   background: #112151;
   padding: 60px 50px 60px 50px;
-  background: #3673cb;
-  background-size: cover;
+  background: rgb(54, 115, 201);
+  background: linear-gradient(
+    180deg,
+    rgba(54, 115, 201, 1) 0%,
+    rgba(62, 119, 195, 1) 100%
+  );
 }
 
 .work h2 {

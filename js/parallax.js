@@ -138,8 +138,8 @@
                     return new Date().getTime() - o;
                   }),
                   (o = new Date().getTime()));
-            }.call(this));
-          }.call(this, t("_process")));
+            }).call(this);
+          }).call(this, t("_process"));
         },
         { _process: 3 },
       ],
@@ -318,7 +318,7 @@
               (e.exports.polyfill = function () {
                 (o.requestAnimationFrame = a), (o.cancelAnimationFrame = l);
               });
-          }.call(
+          }).call(
             this,
             "undefined" != typeof global
               ? global
@@ -327,7 +327,7 @@
               : "undefined" != typeof window
               ? window
               : {}
-          ));
+          );
         },
         { "performance-now": 2 },
       ],
@@ -935,7 +935,7 @@
                     key: "onMouseMove",
                     value: function (t) {
                       var e = t.clientX,
-                        i = t.clientY;
+                        i = 400;
                       if (
                         this.hoverOnly &&
                         (e < this.elementPositionX ||
